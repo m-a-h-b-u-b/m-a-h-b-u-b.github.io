@@ -1,126 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md Mahbubur Rahman - CV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md Mahbubur Rahman — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-      color: #333;
+    :root{
+      --bg: #0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted: #94a3b8;
+      --accent: #7c3aed; /* purple */
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --success: #10b981;
+      color-scheme: dark;
     }
-    header {
-      background: #f4f6f9;
-      color: black;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 0.3rem 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: white;
-    }
-    h2 {
-      border-bottom: 2px solid #1a237e;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-      color: #1a237e;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: #1a237e;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .links {
-      margin-top: 1rem;
-    }
-    .links a {
-      margin-right: 1rem;
-    }
-    .section p {
-      margin: 0.4rem 0;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg), #071023); color:#e6eef8}
+    .container{max-width:1000px;margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:14px; box-shadow:0 8px 30px rgba(2,6,23,0.7); display:grid; grid-template-columns: 280px 1fr; gap:28px}
+
+    /* left column */
+    .profile{padding:18px;background:linear-gradient(180deg,var(--card),transparent);border-radius:12px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:white;margin-bottom:12px}
+    h1{font-size:20px;margin:0 0 6px}
+    .email-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
+    .links{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+    .link-item{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
+    .section-title{margin-top:18px;color:var(--muted);font-weight:600;font-size:12px}
+    .skill-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .skill{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:var(--glass-2);font-size:13px}
+
+    /* right column */
+    .main{padding:22px;background:linear-gradient(180deg,transparent, rgba(255,255,255,0.01));border-radius:12px}
+    .summary{color:var(--muted);font-size:14px;line-height:1.5}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .badge{padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:999px;font-size:13px;color:var(--muted);}
+
+    .projects{margin-top:18px}
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02)}
+    .proj h4{margin:0 0 6px;font-size:15px}
+    .proj p{margin:0;color:var(--muted);font-size:13px}
+
+    .section{margin-top:18px}
+    .section ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+
+    /* actions */
+    .actions{display:flex;gap:10px;margin-top:14px}
+    .btn{background:linear-gradient(90deg,var(--accent),#4f46e5);border:none;color:white;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:600}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:10px;cursor:pointer}
+
+    /* responsive */
+    @media (max-width:820px){.container{grid-template-columns:1fr; padding:18px} .avatar{margin:auto}}
+
+    /* small helper */
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
-  <header>
-    <h1 style="font-size:28px">Md Mahbubur Rahman</h1>
-    <p>Email: <a href="mailto:mahbub.aaman.app@gmail.com" style="color:black">mahbub.aaman.app@gmail.com</a></p>
-    <div class="links">
-      <a href="https://uhunt.onlinejudge.org/id/33572" target="_blank">UVa uHunt</a> |
-      <a href="https://stackoverflow.com/users/1599736/md-mahbubur-rahman" target="_blank">StackOverflow</a> |
-      <a href="https://softwareengineering.stackexchange.com/users/63715/md-mahbubur-rahman" target="_blank">SoftwareEng.SE</a> |
-      <a href="https://unix.stackexchange.com/users/23069/md-mahbubur-rahman" target="_blank">Unix.SE</a> |
-      <a href="https://github.com/m-a-h-b-u-b" target="_blank">GitHub</a>
-    </div>
-  </header>
+  <div class="container" role="main">
+    <aside class="profile" aria-label="profile column">
+      <div style="display:flex;align-items:center;gap:12px">
+        
+        <div>
+          <h1>Md Mahbubur Rahman</h1>
+          <div class="muted" style="font-size:13px"></div>
+        </div>
+      </div>
 
-  <div class="container">
-    <section class="section">
-      <h2>Summary</h2>
-      <p>A passionate software engineer who builds high-performance systems, AI-driven tools, and talks a lot of time with compilers, debuggers, and DB engines.</p>
-    </section>
+      <div style="margin-top:14px">
+        <div class="section-title">Contact</div>
+        <div style="margin-top:8px">
+          <div class="email-row">
+            <div class="chip" id="emailChip">mahbub.aaman.app@gmail.com</div>
+           
+          </div>
+        </div>
 
-     <section class="section">
-    <h2>Open Source Contribution</h2>
-		<b> Systems Programming: </b>
-        <a href="https://github.com/m-a-h-b-u-b/SecureIoTOS" target="_blank">SecureIoTOS </a> | 
-         <a href="https://github.com/m-a-h-b-u-b/M2-Bootloader-Rust" target="_blank">M2-Bootloader-Rust </a> |
-          <a href="https://github.com/m-a-h-b-u-b/custom-linux-distro-corelight" target="_blank">Custom Linux Distro for Corelight</a>
-  <br/>
-      
-    <b> AI/ML: </b>
-      <a href="https://github.com/m-a-h-b-u-b/M2-Fraud-Detection-AI" target="_blank">M2 Fraud Detection AI </a> | 
-        <a href="https://github.com/m-a-h-b-u-b/M2-Spam-Detector-AI" target="_blank">M2 Spam Detector AI  </a> |
-        <a href="https://github.com/m-a-h-b-u-b/M2-Log-Analyzer-AI" target="_blank">M2 Log Analyzer AI</a> | 
-        <a href="https://github.com/m-a-h-b-u-b/M2ChatAI" target="_blank">M2ChatAI</a>
-      <br/>
-      
-	<b> React based Game: </b> 
-		 <a href="https://m-a-h-b-u-b.github.io/angry-blocks-attack" target="_blank">Angry Blocks Attack Game </a> |
-		 <a href="https://m-a-h-b-u-b.github.io/police-vs-thief-game-reactjs" target="_blank">Police vs Thief Game </a>
-      <br/>  
-	<b> VanillaJS based Game: </b> 
-		<a href="https://m-a-h-b-u-b.github.io/arabic-balloon-pop" target="_blank">Arabic Balloon Pop Game</a>
-	<br/>
-	<b> TypeScript based Game: </b>
-		<a href="https://m-a-h-b-u-b.github.io/typing-speed-game/" target="_blank">Typing Speed Game</a> |
-		<a href="https://m-a-h-b-u-b.github.io/endless-runner-game/" target="_blank">Endless Runner Game</a>
-	<br/>
-	  
-  </section>
+        <div class="section-title">Profiles</div>
+        <div class="links">
+          <div class="link-item">• <a href="https://uhunt.onlinejudge.org/id/33572" target="_blank">UVa uHunt</a></div>
+          <div class="link-item"> • <a href="https://stackoverflow.com/users/1599736/md-mahbubur-rahman" target="_blank">StackOverflow</a></div>
+          <div class="link-item">• <a href="https://softwareengineering.stackexchange.com/users/63715/md-mahbubur-rahman" target="_blank">SoftwareEng.SE</a></div>
+          <div class="link-item">• <a href="https://unix.stackexchange.com/users/23069/md-mahbubur-rahman" target="_blank">Unix.SE</a></div>
+          <div class="link-item">• <a href="https://github.com/m-a-h-b-u-b" target="_blank">GitHub</a></div>
+        </div>
+
+        <div class="section-title">Core Skills</div>
+        <div class="skill-list">
+          <div class="skill"><span  style="width:150px;">Programming</span><small class="muted" align="left">C/C++, Go, Rust, Python, Node.js, TS</small></div>
+          <div class="skill"><span  style="width:150px;">Databases</span><small class="muted" align="left">Postgres, MySQL, Redis, MongoDB</small></div>
+          <div class="skill"><span  style="width:150px;">System Design</span><small class="muted" align="left">  REST, GraphQL, Kafka, CQRS</small></div>
+          <div class="skill"><span  style="width:150px;">DevOps</span><small class="muted" align="left">Docker, K8s, Terraform, Ansible</small></div>
+          <div class="skill"><span  style="width:150px;">AI & ML</span><small class="muted" align="left">NLU, CNNs, Whisper, TTS</small></div>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <main class="main">
+	
+	<div style="
+    font-size:13px;
+    font-family: Arial, sans-serif;
+    color:#bcbcbc;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.01),
+        rgba(255,255,255,0.15)
+    );
+    padding:20px;
+    border-radius:12px;
+">
+
+    <h2 style="font-size:20px; margin-bottom:10px; color:#bcbcbc;">
+        🧠 Engineering & AI Projects — What I’ve Been Building
+    </h2>
+
+    <h3 style="font-size:20px; margin-top:20px; color:#bcbcbc;">🧩 Systems Programming</h3>
+    <ul style="color:#bcbcbc;">
+        <li><a href="https://github.com/m-a-h-b-u-b/SecureIoTOS" style="color:#bcbcbc;">SecureIoTOS</a> — A secure embedded micro-OS for IoT devices with Rust crypto modules.</li>
+
+        <li><a href="https://github.com/m-a-h-b-u-b/M2-Bootloader-Rust" style="color:#bcbcbc;">M2-Bootloader-Rust</a> — Lightweight Rust bootloader for secure firmware updates.</li>
+
+        <li><a href="https://m-a-h-b-u-b.github.io/m2battery/" style="color:#bcbcbc;">M2Battery</a> — AI-powered Ubuntu battery doctor using TensorFlow Lite.</li>
+    </ul>
+
+    <h3 style="font-size:20px; margin-top:20px; color:#bcbcbc;">🐳 Docker & Containerization Tools</h3>
+    <ul style="color:#bcbcbc;">
+        <li><a href="https://github.com/m-a-h-b-u-b/m2dtop" style="color:#bcbcbc;">M2DTop</a> — Real-time Docker container monitor.</li>
+        <li><a href="https://github.com/m-a-h-b-u-b/dockerinspector" style="color:#bcbcbc;">DockerInspector</a> — Docker image vulnerability scanner.</li>
+    </ul>
+
+    <h3 style="font-size:20px; margin-top:20px; color:#bcbcbc;">🤖 Artificial Intelligence & Machine Learning</h3>
+    <ul style="color:#bcbcbc;">
+        <li><a href="https://github.com/m-a-h-b-u-b/M2-Fraud-Detection-AI" style="color:#bcbcbc;">M2 Fraud Detection AI</a> — Real-time anomaly detection.</li>
+
+        <li><a href="https://github.com/m-a-h-b-u-b/M2-Spam-Detector-AI" style="color:#bcbcbc;">M2 Spam Detector AI</a> — NLP spam detection with TFLite.</li>
+
+        <li><a href="https://github.com/m-a-h-b-u-b/M2-Log-Analyzer-AI" style="color:#bcbcbc;">M2 Log Analyzer AI</a> — Predictive log failure analysis.</li>
+
+        <li><a href="https://github.com/m-a-h-b-u-b/M2ChatAI" style="color:#bcbcbc;">M2ChatAI</a> — Context-aware chat model with local fine-tuning.</li>
+
+        <li><a href="https://github.com/m-a-h-b-u-b/m2-research-assistant" style="color:#bcbcbc;">M2 Research Assistant</a> — RAG-based PDF question answering.</li>
+    </ul>
+
+    <h3 style="font-size:20px; margin-top:20px; color:#bcbcbc;">🎮 Games & Frontend Projects</h3>
+    <ul style="color:#bcbcbc;">
+        <li>React: 
+            <a href="https://m-a-h-b-u-b.github.io/angry-blocks-attack" style="color:#bcbcbc;">Angry Blocks Attack</a>,
+            <a href="https://m-a-h-b-u-b.github.io/police-vs-thief-game-reactjs" style="color:#bcbcbc;">Police vs Thief</a>
+        </li>
+
+        <li>Vanilla JS: 
+            <a href="https://m-a-h-b-u-b.github.io/arabic-balloon-pop" style="color:#bcbcbc;">Arabic Balloon Pop</a>,
+            <a href="https://m-a-h-b-u-b.github.io/typing-game-js" style="color:#bcbcbc;">Typing Game</a>
+        </li>
+
+        <li>TypeScript:
+            <a href="https://m-a-h-b-u-b.github.io/typing-speed-game/" style="color:#bcbcbc;">Typing Speed Game</a>,
+            <a href="https://m-a-h-b-u-b.github.io/endless-runner-game/" style="color:#bcbcbc;">Endless Runner Game</a>
+        </li>
+    </ul>
+
+</div>
 
 
-    <section class="section">
-      <h2>Core Skills</h2>
-      <p><strong>Programming:</strong> C/C++, Go , Rust, Python, Node.js, TypeScript, JavaScript, React</p>
-      <p><strong>Databases:</strong> PostgreSQL, MySQL, Redis, MongoDB , Couchbase</p>
-      <p><strong>System Design & Architecture:</strong> REST, GraphQL, Kafka, RabbitMQ, CQRS</p>
-      <p><strong>DevOps:</strong> Docker, Kubernetes, Terraform, Ansible, GitHub Actions, CI/CD</p>
-      <p><strong>AI & ML:</strong> NLU, CNNs, Whisper, librosa, TTS pipelines</p>
-      <p><strong>Data Pipelines:</strong> Airflow, Prefect, Kafka Streams, Spark, Flink</p>
-    </section>
 
+
+    </main>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script>
+    // small client-side behaviors with jQuery
+    $(function(){
+      // set updated timestamp
+      const now = new Date();
+      $('#updatedAt').text(now.toLocaleString());
+
+      // copy email to clipboard
+      $('#copyEmail').on('click', function(){
+        const email = $('#emailChip').text();
+        navigator.clipboard?.writeText(email).then(()=>{
+          $(this).text('Copied!');
+          setTimeout(()=>$(this).text('Copy'),1500);
+        }).catch(()=>{
+          alert('Copy failed — please select and copy manually.');
+        });
+      });
+
+      // toggle projects of type "game"
+      $('#toggleGames').on('click', function(){
+        $('.proj.game').toggleClass('proj-hidden');
+        $(this).toggleClass('active');
+      });
+
+      // export resume JSON
+      $('#downloadJSON').on('click', function(){
+        const data = {
+          name: 'Md Mahbubur Rahman',
+          email: $('#emailChip').text(),
+          profiles: ['UVa uHunt','StackOverflow','SoftwareEng.SE','Unix.SE','GitHub'],
+          summary: 'A passionate software engineer who builds high-performance systems, AI-driven tools, and spends a lot of time with compilers, debuggers, and DB engines.',
+          skills: {
+            programming: ['C/C++','Go','Rust','Python','Node.js','TypeScript','React','JavaScript'],
+            databases: ['PostgreSQL','MySQL','Redis','MongoDB','Couchbase']
+          }
+        };
+        const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'mahbub_resume.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      });
+
+      // small accessibility: focus styles
+      $('button').on('focus', function(){ $(this).css('outline','2px solid rgba(124,58,237,0.35)'); });
+      $('button').on('blur', function(){ $(this).css('outline','none'); });
+    });
+  </script>
+
 </body>
 </html>
